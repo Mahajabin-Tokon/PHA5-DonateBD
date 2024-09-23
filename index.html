@@ -20,7 +20,13 @@
     <nav class="bg-orange-50">
       <div class="lg:flex justify-around items-center p-5">
         <div class="flex justify-center items-center gap-2">
-          <button id="blog" class="btn bg-green-400" onclick="changePageToFAQ()">Blog</button>
+          <button
+            id="blog"
+            class="btn bg-green-400"
+            onclick="changePageToFAQ()"
+          >
+            Blog
+          </button>
         </div>
         <div class="flex justify-center items-center gap-2">
           <img class="w-8" src="./images/logo.png" alt="Image of the Logo" />
@@ -35,12 +41,16 @@
 
     <!-- Buttons Section -->
     <div class="flex justify-center items-center gap-2 mt-10">
-      <button class="btn bg-white">Donation</button>
-      <button class="btn bg-white">History</button>
+      <button id="donation-section-btn" class="border rounded-lg px-4 py-2">
+        Donation
+      </button>
+      <button id="history-section-btn" class="border rounded-lg px-4 py-2">
+        History
+      </button>
     </div>
 
     <!-- Donation Section -->
-    <div class="">
+    <div id="donation-section">
       <!-- Donation 1 -->
       <div
         class="mx-auto m-1 border rounded-lg lg:w-9/12 w-11/12 lg:flex justify-center items-center gap-2 mt-10"
@@ -150,7 +160,11 @@
       </div>
     </div>
 
+    <!-- History Section -->
+    <div id="history-section"></div>
+
     <!-- JS script -->
     <script src="./js/index.js"></script>
+    <script src="./js/utilities.js"></script>
   </body>
 </html>
