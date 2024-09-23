@@ -27,11 +27,12 @@ document
     event.preventDefault();
 
     const histSectionEl = document.getElementById("history-section");
+    const title = document.getElementById("donate-one-title").innerText;
+    const modal = document.getElementById("my-modal-1");
 
     const currentBalance = getTextFieldValueById("current-balance");
     const donateOneAmount = getTextFieldValueById("donate-one-amount");
-    const title = document.getElementById("donate-one-title").innerText;
-    
+
     const amount = getInputFieldValueById("donate-one-input");
 
     if (amount <= currentBalance && amount >= 0) {
@@ -48,12 +49,14 @@ document
         <p class="text-xl p-4">${amount}Tk is donated for ${title}</p>
         <p class="text-xl bg-slate-300 rounded-lg p-4 w-full">${new Date()}</p>
       </div>`;
+      console.log(modal)
 
+      modal.showModal();
     } else if (amount <= 0) {
-      alert("Donation amount cannot be negative");
+      return alert("Donation amount cannot be negative");
     } else if (isNaN(amount)) {
-      alert("Please input number only");
+      return alert("Please input number only");
     } else {
-      alert("Donation amount is exceeding current balance");
+      return alert("Donation amount is exceeding current balance");
     }
   });
