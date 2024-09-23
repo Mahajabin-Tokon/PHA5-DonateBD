@@ -17,38 +17,42 @@
   </head>
   <body>
     <!-- Navigation Section -->
-    <nav class="bg-orange-50">
-      <div class="lg:flex justify-around items-center p-5">
-        <div class="flex justify-center items-center gap-2">
-          <button
-            id="blog"
-            class="btn bg-green-400"
-            onclick="changePageToFAQ()"
-          >
-            Blog
-          </button>
+    <div id="scrolling-element" class="sticky top-0">
+      <nav id="navbar" class="bg-orange-50">
+        <div class="lg:flex justify-around items-center p-5">
+          <div class="flex justify-center items-center gap-2">
+            <button
+              id="blog"
+              class="btn bg-green-400"
+              onclick="changePageToFAQ()"
+            >
+              Blog
+            </button>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <img class="w-8" src="./images/logo.png" alt="Image of the Logo" />
+            <h2 class="font-bold">Donate Bangladesh</h2>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <img src="./images/coin.png" alt="Image of a coin" />
+            <h2><span id="current-balance">5500</span> BDT</h2>
+          </div>
         </div>
-        <div class="flex justify-center items-center gap-2">
-          <img class="w-8" src="./images/logo.png" alt="Image of the Logo" />
-          <h2 class="font-bold">Donate Bangladesh</h2>
-        </div>
-        <div class="flex justify-center items-center gap-2">
-          <img src="./images/coin.png" alt="Image of a coin" />
-          <h2><span id="current-balance">5500</span> BDT</h2>
-        </div>
+      </nav>
+
+      <!-- Buttons Section -->
+      <div class="flex justify-center items-center gap-2 mt-10">
+        <button
+          id="donation-section-btn"
+          class="border rounded-lg px-4 py-2 bg-green-400"
+        >
+          Donation
+        </button>
+        <button id="history-section-btn" class="border rounded-lg px-4 py-2">
+          History
+        </button>
       </div>
-    </nav>
-
-    <!-- Buttons Section -->
-    <div class="flex justify-center items-center gap-2 mt-10">
-      <button id="donation-section-btn" class="border rounded-lg px-4 py-2">
-        Donation
-      </button>
-      <button id="history-section-btn" class="border rounded-lg px-4 py-2">
-        History
-      </button>
     </div>
-
     <!-- Donation Section -->
     <div id="donation-section">
       <!-- Donation 1 -->
@@ -86,10 +90,7 @@
             type="text"
             placeholder="Write Donation Amount"
           />
-          <button
-            id="donate-one-btn"
-            class="btn bg-green-400"
-          >
+          <button id="donate-one-btn" class="btn bg-green-400">
             Donate Now
           </button>
           <dialog id="my-modal-1" class="modal">
@@ -183,6 +184,9 @@
 
     <!-- History Section -->
     <div id="history-section" class="hidden"></div>
+
+    <!-- Footer Section -->
+    <footer class="bg-orange-50 h-20 mt-10"></footer>
 
     <!-- JS script -->
     <script src="./js/index.js"></script>
