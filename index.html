@@ -93,19 +93,6 @@
           <button id="donate-one-btn" class="btn bg-green-400">
             Donate Now
           </button>
-          <dialog id="my-modal-1" class="modal">
-            <div class="modal-box flex flex-col justify-center items-center">
-              <h3 class="text-xl font-bold">Congrats</h3>
-              <img class="mt-3" src="./images/coin.png" alt="Image of a coin" />
-              <p class="py-4 text-slate-500">You Have Donated for Humankind</p>
-              <h4 class="font-bold">Successfully</h4>
-              <div class="modal-action">
-                <form method="dialog">
-                  <button class="btn">Close Confirmtion</button>
-                </form>
-              </div>
-            </div>
-          </dialog>
         </div>
       </div>
 
@@ -125,23 +112,28 @@
             class="flex justify-start items-center gap-2 bg-slate-200 rounded-lg px-2 py-1 w-fit"
           >
             <img src="./images/coin.png" alt="Image of a coin" />
-            <p>0 BDT</p>
+            <p><span id="donate-two-amount">0</span> BDT</p>
           </div>
-          <h2 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+          <h2 id="donate-two-title" class="font-bold">
+            Donate for Flood Relief in Feni,Bangladesh
+          </h2>
           <p class="text-slate-500">
-            The recent floods in Noakhali have caused significant damage to
-            homes infrastructure. Your donation will help provide essential
-            supplies and to those affected by this disaster. Every contribution,
-            big or small, makes difference. Please join us in supporting the
-            relief efforts and making a positive impact on the lives of those in
+            The recent floods in Feni have caused significant problems for
+            the people of Feni. Your donation will help provide essential
+            support to those affected by this catastrophe. Every contribution,
+            large or small, makes a difference. Please join us in heling the
+            people and making a positive contribution on the lives of those in
             need.
           </p>
           <input
+            id="donate-two-input"
             class="border rounded-lg p-2"
             type="text"
             placeholder="Write Donation Amount"
           />
-          <button class="btn bg-green-400">Donate Now</button>
+          <button id="donate-two-btn" class="btn bg-green-400">
+            Donate Now
+          </button>
         </div>
       </div>
 
@@ -161,29 +153,49 @@
             class="flex justify-start items-center gap-2 bg-slate-200 rounded-lg px-2 py-1 w-fit"
           >
             <img src="./images/coin.png" alt="Image of a coin" />
-            <p>0 BDT</p>
+            <p><span id="donate-three-amount">0</span> BDT</p>
           </div>
-          <h2 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+          <h2 id="donate-three-title" class="font-bold">
+            Aid for Injured in the Quota Movement
+          </h2>
           <p class="text-slate-500">
-            The recent floods in Noakhali have caused significant damage to
-            homes infrastructure. Your donation will help provide essential
-            supplies and to those affected by this disaster. Every contribution,
+            The recent Injured in Quota Movement have caused significant damage to
+            the nation. Your donation will help provide essential
+            medical aid to those affected by this issue. Every contribution,
             big or small, makes difference. Please join us in supporting the
-            relief efforts and making a positive impact on the lives of those in
-            need.
+            aid efforts and making a positive impact on the lives of those in
+            the country.
           </p>
           <input
+          id="donate-three-input"
             class="border rounded-lg p-2"
             type="text"
             placeholder="Write Donation Amount"
           />
-          <button class="btn bg-green-400">Donate Now</button>
+          <button id="donate-three-btn" class="btn bg-green-400">
+            Donate Now
+          </button>
         </div>
       </div>
     </div>
 
     <!-- History Section -->
     <div id="history-section" class="hidden"></div>
+
+    <!-- Modal -->
+    <dialog id="my-modal" class="modal">
+      <div class="modal-box flex flex-col justify-center items-center">
+        <h3 class="text-xl font-bold">Congrats</h3>
+        <img class="mt-3" src="./images/coin.png" alt="Image of a coin" />
+        <p class="py-4 text-slate-500">You Have Donated for Humankind</p>
+        <h4 class="font-bold">Successfully</h4>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close Confirmtion</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <!-- Footer Section -->
     <footer class="bg-orange-50 h-20 mt-10"></footer>
